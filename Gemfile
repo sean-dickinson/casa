@@ -53,7 +53,7 @@ group :development, :test do
   gem "pry-byebug"
   gem "rspec-rails"
   gem "shoulda-matchers"
-  gem "standard", "1.5.0" # 1.6.0 errors on all factorybot create variables
+  gem "standard" # opinionated linter
 end
 
 group :development do
@@ -78,4 +78,3 @@ group :test do
   gem "webdrivers" # easy installation and use of web drivers to run system tests with browsers
   gem "webmock" # HTTP request stubber
 end
-
