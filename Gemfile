@@ -63,7 +63,7 @@ group :development do
   gem "spring-commands-rspec"
   gem "traceroute" # for finding unused routes
   gem "web-console" # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem "bundler-audit", "~> 0.9.1" # run bundle audit to see security issues with gems
+  gem "bundler-audit" # run bundle audit to see security issues with gems
 end
 
 group :test do
