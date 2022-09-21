@@ -545,7 +545,7 @@ DEPENDENCIES
   traceroute
   twilio-ruby
   tzinfo-data
-  web-console (>= 3.3.0)
+  web-console
   webdrivers
   webmock
 

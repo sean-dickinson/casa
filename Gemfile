@@ -62,7 +62,7 @@ group :development do
   gem "spring" # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring-commands-rspec"
   gem "traceroute" # for finding unused routes
-  gem "web-console", ">= 3.3.0" # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem "web-console" # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem "bundler-audit", "~> 0.9.1" # run bundle audit to see security issues with gems
 end
 
