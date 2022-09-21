@@ -41,6 +41,7 @@ gem "scout_apm"
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "strong_migrations"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "cssbundling-rails", "~> 1.1"
 
 group :development, :test do
   gem "bullet" # Detect and fix N+1 queries
@@ -62,6 +63,7 @@ group :development do
   gem "spring-commands-rspec"
   gem "traceroute" # for finding unused routes
   gem "web-console", ">= 3.3.0" # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+gem "bundler-audit", "~> 0.9.1"
 end
 
 group :test do
@@ -77,6 +79,3 @@ group :test do
   gem "webdrivers" # easy installation and use of web drivers to run system tests with browsers
 end
 
-# gem "pdf-reader", "~> 2.9"
-
-gem "cssbundling-rails", "~> 1.1"
