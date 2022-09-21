@@ -11,7 +11,7 @@ gem "azure-storage-blob", require: false
 gem "bugsnag" # tracking errors in prod
 gem "caxlsx", "~> 3.2" # excel spreadsheets - TODO can we remove this version restriction?
 gem "caxlsx_rails", "~> 0.6.3" # excel spreadsheets - TODO can we remove this version restriction?
-gem "cssbundling-rails", "~> 1.1"
+gem "cssbundling-rails"
 gem "delayed_job_active_record"
 gem "devise" # for authentication
 gem "devise_invitable"
@@ -19,7 +19,7 @@ gem "draper" # adds decorators for cleaner presentation logic
 gem "faker" # creates realistic seed data, valuable for staging and demos
 gem "filterrific" # filtering and sorting of models
 gem "httparty" # for making HTTP network requests 🥳
-gem "image_processing", "~> 1.12" # Set of higher-level helper methods for image processing.
+gem "image_processing", "~> 1.12" # Set of higher-level helper methods for image processing. TODO can we remove this version restriction?
 gem "jbuilder" # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jsbundling-rails"
 gem "lograge" # log less so heroku papertrail quits rate limiting our logs
