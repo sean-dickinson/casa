@@ -2,10 +2,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <%= t(".header") %>
+        Congratulations
       </div>
       <div class="modal-body">
-        <%= t(".body") %>
+        New entry created
         <p>
         <h6><%= t(".note") %></h6>
         <div id="note-content"></div>
@@ -14,9 +14,9 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-learning-hours-cancel">
-          <%= t("button.go_back_to_form") %>
+          Go back to form
         </button>
-        <%= form.submit t("button.continue_submitting"), class: "btn btn-primary", id: "modal-learning-hours-submit" %>
+        <%= form.submit "Continue Submitting", class: "btn btn-primary", id: "modal-learning-hours-submit" %>
       </div>
     </div>
   </div>
