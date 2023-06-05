@@ -85,6 +85,8 @@ RSpec.describe "court_dates/edit", type: :system do
 
   it "can't delete a future court date as volunteer", js: true do
     sign_out admin
+    sleep(1)
+    
     volunteer.casa_cases = [casa_case]
     sign_in volunteer
 
