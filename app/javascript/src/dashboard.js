@@ -137,8 +137,21 @@ $('document').ready(() => {
         }
       })
     },
-    order: [[6, 'desc']],
+    order: [[7, 'desc']],
+    select: {
+      style: 'multi'
+    },
     columns: [
+      {
+        data: 'id',
+        targets: 0,
+        searchable: false,
+        orderable: false,
+        checkboxes: {
+          selectRow: true,
+          stateSave: false
+        }
+      },
       {
         name: 'display_name',
         render: (data, type, row, meta) => {
@@ -293,6 +306,29 @@ $('document').ready(() => {
     },
     drawCallback: function (settings) {
       $('[data-toggle=tooltip]').tooltip()
+    }
+  })
+
+  $('#form-bulk-assignment').on('submit', function (e) {
+    const form = this
+    const rowsSelected = volunteersTable.column(0).checkboxes.selected()
+
+    $.each(rowsSelected, function (index, rowId) {
+      $(form).append(
+        $('<input>')
+          .attr('type', 'hidden')
+          .attr('name', 'supervisor_volunteer[volunteer_ids][]')
+          .val(rowId)
+      )
+    })
+  })
+
+  volunteersTable.column(0).on('change', function () {
+    const rowsSelected = volunteersTable.column(0).checkboxes.selected()
+    if (rowsSelected.count() === 0) {
+      $('#volunteers-selected').html('')
+    } else {
+      $('#volunteers-selected').html('s (' + rowsSelected.count() + ')')
     }
   })
 
