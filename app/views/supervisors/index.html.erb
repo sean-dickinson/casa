@@ -157,7 +157,8 @@
             </table>
              <div class="select-style-1">
               <label for='supervisor_volunteer_supervisor_id'>Select a Supervisor</label>
-              <select name='supervisor_volunteer[supervisor_id]' class='form-control select2'>
+              <%#= select name='supervisor_volunteer[supervisor_id]' class='form-control select2' %>
+              <select name='supervisor_id' class='form-control select2'>
                <% @supervisors&.active.each do |supervisor| %>
                   <option value="<%= supervisor.id %>"><%= supervisor.display_name %></option>
                 <% end %>

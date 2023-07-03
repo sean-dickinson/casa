@@ -27,11 +27,11 @@ class SupervisorVolunteersController < ApplicationController
 
   def bulk_assignment
     authorize :supervisor_volunteer
-    volunteer_ids = params[:volunteer_ids]
+    volunteer_ids = params[:volunteer_ids] #||= supervisor_volunteers[:volunteer_ids]
     supervisor = supervisor_volunteer_parent
     created_volunteers = ""
     volunteer_ids.each do |vol_id|
-      supervisor_volunteer =  supervisor_volunteer_parent.supervisor_volunteers.find_or_create_by!(volunteer_id: vol_id.to_i)
+      supervisor_volunteer =  supervisor.supervisor_volunteers.find_or_create_by!(volunteer_id: vol_id.to_i)
       supervisor_volunteer.is_active = true unless supervisor_volunteer&.is_active?
       volunteer = supervisor_volunteer.volunteer 
       supervisor_volunteer.save
