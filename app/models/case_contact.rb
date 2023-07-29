@@ -217,6 +217,7 @@ end
 #  notes                      :string
 #  occurred_at                :datetime         not null
 #  reimbursement_complete     :boolean          default(FALSE)
+#  status                     :integer          default(0), not null
 #  want_driving_reimbursement :boolean          default(FALSE)
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
