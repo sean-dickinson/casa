@@ -94,7 +94,7 @@
 #   "X-Content-Type-Options" => "nosniff",
 #   "X-Download-Options" => "noopen",
 #   "X-Permitted-Cross-Domain-Policies" => "none",
-#   "Referrer-Policy" => "strict-origin-when-cross-origin"
+#   "Referer-Policy" => "strict-origin-when-cross-origin"
 # }
 
 # ** Please read carefully, this must be configured in config/application.rb **
